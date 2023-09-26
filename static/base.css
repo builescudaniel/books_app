@@ -1,0 +1,43 @@
+/* Reset some default styles in browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body with a font and some padding */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Style the h1 title */
+h1 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Style the list */
+ul {
+    list-style-type: none;
+}
+
+/* Style each book item in the list */
+li {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Style the book title */
+li h2 {
+    color: #333;
+}
+
+/* Style the book details */
+li p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
