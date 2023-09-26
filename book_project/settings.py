@@ -33,6 +33,8 @@ DEBUG = False
 # here you need to update the domain which you will use on app with debug = false
 ALLOWED_HOSTS = ['127.0.0.1']
 
+# rate limiting message
+RATELIMIT_VIEW = 'book_app.views.my_custom_view'
 
 # Application definition
 

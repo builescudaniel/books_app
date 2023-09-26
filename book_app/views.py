@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Book
 from django_ratelimit.decorators import ratelimit
 
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 
 def get_client_ip(request, view):
     if not isinstance(request, HttpRequest):
@@ -14,6 +14,9 @@ def get_client_ip(request, view):
     else:
         ip = request.META.get('REMOTE_ADDR', "unknown")
     return ip
+
+def my_custom_view(request, exception=None):
+    return HttpResponse('You have been rate-limited. Try again later.', status=429)
 
 # Create your views here.
 @ratelimit(key=get_client_ip, rate='5/m', method='GET', block=True)
